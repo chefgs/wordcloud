@@ -1,12 +1,11 @@
-FROM python:3.12-rc-alpine
+FROM python:slim-bullseye
 
 WORKDIR /app
 
-COPY requirements.txt /app
+COPY requirements.txt /app/requirements.txt
 
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY . .
 
-CMD ["python", "show_wordcloud.py"]
+CMD ["python3", "show_wordcloud.py"]

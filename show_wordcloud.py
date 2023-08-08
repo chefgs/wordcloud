@@ -1,6 +1,5 @@
 # Install required libraries
 # pip install wordcloud matplotlib numpy
-
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
@@ -16,10 +15,15 @@ Pages for static website hosting \
 Web-based support"
 
 # Create a WordCloud object
-wordcloud_str2 = WordCloud(width=800, height=400, background_color='white').generate(sample_text)
+wordcloud_str = WordCloud(width=800, height=400, background_color='white').generate(sample_text)
 
 # Display the generated word cloud
+# plt.switch_backend('TkAgg')
 plt.figure(figsize=(10, 5))
-plt.imshow(wordcloud_str2, interpolation='bilinear')
+plt.imshow(wordcloud_str, interpolation='bilinear')
 plt.axis('off')
-plt.show()
+# Show the wordcloud as an image in Matlab simulator
+# plt.show()
+
+# Save the wordcloud as a png image file
+plt.savefig('./wordcloud.png')
