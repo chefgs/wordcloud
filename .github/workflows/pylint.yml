@@ -1,3 +1,4 @@
+# Run Pylinting to checking coding style and syntaxes
 name: Pylint
 
 on: [push]
@@ -7,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9"] # If needed add "3.10"
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
