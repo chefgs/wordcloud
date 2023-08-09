@@ -1,8 +1,12 @@
+"""
+This program generates a WordCloud image for the given sample_text
+"""
 # Install required libraries
 # pip install wordcloud matplotlib numpy
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
+# pylint: disable=C0103
 sample_text = "GitHub Actions for CI/CD \
 GitHub Packages for container hosting \
 Protected branches on all repos \
